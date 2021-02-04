@@ -1,7 +1,7 @@
 # UdemyDocker
  Docker course
 
-https://img.shields.io/docker/cloud/build/nolik2000/docker-r-studio
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/nolik2000/docker-r-studio)
 
 ## Build Docker image steps
 
