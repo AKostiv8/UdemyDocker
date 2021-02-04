@@ -1,0 +1,5 @@
+#Executable file to start container with RStudio
+
+docker run --rm -p 8787:8787 -e USER=myself -e PASSWORD=guest -v /Users/anastasiia_kostiv/Documents/Udemy_Course_Shared:/home/myself/r-studio nolik2000/docker-r-studio
+
+
