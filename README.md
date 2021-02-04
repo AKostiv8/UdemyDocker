@@ -1,6 +1,8 @@
 # UdemyDocker
  Docker course
 
+https://img.shields.io/docker/cloud/build/nolik2000/docker-r-studio
+
 ## Build Docker image steps
 
 `docker login` - to authenticate
@@ -89,3 +91,9 @@ Execute bash script in container:
 --we can link both Docker Hub and GitHub accounts
 
 --change in the code will rebuild the image. Automatically!
+
+## Verify Automated build
+--the image locally is not obviously the same is not in Docker Hub, Dockerhub has a newer image because it was built on the Docker Hub Servers, so good to do `pull` in this case
+
+`docker pull nolik2000/docker-r-studio`
+ 
