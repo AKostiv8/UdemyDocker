@@ -96,4 +96,67 @@ Execute bash script in container:
 --the image locally is not obviously the same is not in Docker Hub, Dockerhub has a newer image because it was built on the Docker Hub Servers, so good to do `pull` in this case
 
 `docker pull nolik2000/docker-r-studio`
- 
+
+### ========================================================
+
+## Build Another Docker image
+
+--We have built docker image directly on Dockerhub via connection GitHub with DockerFile
+
+-- It is usually recommended when we already sure that build will work
+
+## Pull out image locally to your computer
+ `docker pull nolik2000/docker-r-h2o`
+
+##Test container
+
+`docker images`
+
+`run exec file` - inside you can use R bash commands like sd(5), search() etc
+
+## Verify stopped containers
+
+`docker ps -a`
+
+
+### =============================================
+
+`Dockerfile` contains sets of instructions to build an image
+
+Command `docker build .` will build the image on the local computer
+
+Once the image is built we can launch the container with a command `docker run ...`
+
+If necessary we can update the image from running container by executing a command `docker commit ...` (from another terminal)
+
+Image can be stored (published) on the Docker Hub `docker push repoID/imageID`
+
+Image can be saved locally `docker save imageID > imageID.tar`
+
+Other users could get the image from Docker Hub with a command `docker pull repoID/imageID`
+
+... or restore it from the archive with `docker load --input imageID.tar`
+
+## Deleting un-used containers/images
+
+Sometimes we can forget to launch our containers by specifying --rm key or there may be intermediate images with a failed build. Those objects may take some space (e.g. 10 GB) so it is a good practice to delete those. The easiest way to delete those is to execute command:
+
+`docker system prune`
+
+
+##Note on Docker Compose
+Typically, in order to run multi-container applications, a dedicated method exists. This is called `docker-compose`. As this method per se is quite complicated to grasp it will not be covered in this section. Instead, a separate section on docker compose will be published to wrap up the course.
+
+The idea will be to develop a fully functional multi-container application like this:
+
+-Shiny App
+
+-Plumber API
+
+-Database
+
+-Network
+
+These will be assembled and started with one docker compose file.
+
+Stay tuned, keep learning and don't forget to have some fun with this course!
