@@ -160,3 +160,21 @@ The idea will be to develop a fully functional multi-container application like 
 These will be assembled and started with one docker compose file.
 
 Stay tuned, keep learning and don't forget to have some fun with this course!
+
+## Establish network
+`docker network create -d bridge my-net`
+
+## List of available network
+`docker network ls`
+
+## Stop 2 containers
+
+`docker container stop Dev API`
+
+## Remove network
+
+`docker network rm my-net`
+
+## Inspect network
+
+`docker network inspect my-net`
